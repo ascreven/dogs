@@ -1,0 +1,7 @@
+dogs.generate:
+  path: 'dogs/{breed}'
+  defaults:
+    _controller: '\Drupal\dogs\Controller\DogsController::generate'
+    _title_callback: '\Drupal\dogs\Controller\DogsController::getTitle'
+  requirements:
+    _access: 'TRUE'
