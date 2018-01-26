@@ -7,10 +7,7 @@
 
 namespace Drupal\dogs\Plugin\Block;
 
-
-use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Form\FormStateInterface;
 
 
 /**

@@ -22,7 +22,7 @@ class DogsController extends ControllerBase {
   *   Dog breed to display picture of
   */
   public function generate( $breed ) {
-    // $options = new array();
+
     $client = \Drupal::httpClient();
     $response = $client->get('http://dog.ceo/api/breed/' . $breed . '/images/random');
     $response_content = $response->getBody()->getContents();
@@ -39,5 +39,4 @@ class DogsController extends ControllerBase {
   public function getTitle( $breed ) {
     return $breed;
   }
-
 }

@@ -7,6 +7,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Url;
 
+
 /**
 * Dogs Form
 */
@@ -19,11 +20,11 @@ class DogsForm extends FormBase {
     return 'dog_block_form';
   }
 
+
   /**
   * {@inheritdoc}
   */
   public function buildForm(array $form, FormStateInterface $form_state) {
-
     $client = \Drupal::httpClient();
     $response = $client->get('http://dog.ceo/api/breeds/list');
     $response_content = $response->getBody()->getContents();
@@ -33,7 +34,7 @@ class DogsForm extends FormBase {
 
     $options = array();
 
-    foreach ($breeds as $key => $breed) {;
+    foreach ($breeds as $key => $breed) {
       $options[$breed] = t($breed);
     }
 
@@ -53,6 +54,7 @@ class DogsForm extends FormBase {
 
     return $form;
   }
+
 
   public function validateForm(array &$form, FormStateInterface $form_state) {
     $breed = $form_state->getValue('breed');
