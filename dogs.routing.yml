@@ -1,4 +1,12 @@
-dogs.generate:
+dogs.dogs_form:
+  path: 'dogs'
+  defaults:
+    _form: '\Drupal\dogs\Form\DogsForm'
+    _title: "Select a Breed"
+  requirements:
+    _access: 'TRUE'
+
+dogs.breed:
   path: 'dogs/{breed}'
   defaults:
     _controller: '\Drupal\dogs\Controller\DogsController::generate'

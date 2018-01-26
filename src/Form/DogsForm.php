@@ -68,7 +68,7 @@ class DogsForm extends FormBase {
     $breed = $form_state->getValue('breed');
 
     $form_state->setRedirect(
-    'dogs.generate',
+    'dogs.breed',
     array(
       'breed' => $form_state->getValue('breed'),
       )

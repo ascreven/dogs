@@ -1,0 +1,5 @@
+dogs.dogs_form:
+  title: "Dogs"
+  route_name: dogs.dogs_form
+  menu_name: main
+  weight: 100
